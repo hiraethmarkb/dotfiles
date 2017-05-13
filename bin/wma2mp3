@@ -1,0 +1,4 @@
+#! /bin/bash
+for f in *.wma; do
+  ffmpeg -i "$f" -ab 128k -map_metadata 0:s:0 "${f/.wma/.mp3}"
+done

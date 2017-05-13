@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Unmounting media share..."
+sudo umount /mnt/shares/media
+sleep 10
+
+echo "Unmounting data share..."
+sudo umount /mnt/shares/data
+sleep 10
+
+echo "Shutting down Pi..."
+ssh pi@192.168.0.20 "sudo halt"

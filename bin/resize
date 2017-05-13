@@ -1,0 +1,13 @@
+#!/bin/sh                                                                                                                      
+
+mkdir -p ./resized/$1
+
+for file
+    do
+    if [ ! -e $file ]
+        then
+        continue
+    fi
+    toname="./Resized/"$1"/"$( echo $file | cut -f1 -d.)"_"$1".jpg"
+    convert -geometry $1x$1 -quality 100 "${file}" "${toname}"
+done 

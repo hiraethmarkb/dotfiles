@@ -1,0 +1,18 @@
+[user]
+	name = Mark Burns
+	email = mark.burns@hydrant.co.uk
+[core]
+	editor = vim
+	excludesfile = /home/mark/.gitignore_global
+[merge]
+	tool = vimdiff
+[credential]
+	helper = cache
+[color]
+	ui = true
+[push]
+	default = simple
+[alias]
+	lg = log --oneline --abbrev-commit --all --graph --decorate --color
+[diff]
+	tool = meld

@@ -1,0 +1,78 @@
+#!/bin/bash
+#DEST="/mnt/shares/media/@music" 
+DEST="/run/media/mark/d100fddb-bfac-4278-ba43-6c6142f0e716/@music/"
+
+# get_metadata
+get_metadata () {
+
+  # flac
+  ARTIST=`metaflac "$file" --show-tag=ARTIST | sed s/.*=//g`
+  ALBUM=`metaflac "$file" --show-tag=ALBUM | sed s/.*=//g`
+  TITLE=`metaflac "$file" --show-tag=TITLE | sed s/.*=//g`
+  TRACKNUMBER=`metaflac "$file" --show-tag=TRACKNUMBER | sed s/.*=//g`
+ 
+}
+
+# organise file(s)
+organise_file() {
+ 
+  # check ARTIST directory exists
+  if [ -d "$DEST/${ARTIST// /_}" ]
+  then
+    # ARTIST directory exists, check ALBUM directory exists
+    if [ -d "$DEST/${ARTIST// /_}/${ALBUM// /_}" ]
+    then
+      # ALBUM directory exists, move to library
+      #cp --no-preserve=mode,ownership "$file" "$DEST/${ARTIST// /_}/${ALBUM// /_}/$TRACKNUMBER-${TITLE// /_}.flac"
+      rsync --progress "$file" "$DEST/${ARTIST// /_}/${ALBUM// /_}/$TRACKNUMBER-${TITLE// /_}.flac"
+
+    else
+      # create ALBUM directory
+      mkdir -p "$DEST/${ARTIST// /_}/${ALBUM// /_}"
+      rsync --progress "$file" "$DEST/${ARTIST// /_}/${ALBUM// /_}/$TRACKNUMBER-${TITLE// /_}.flac"
+
+    fi
+    else
+      # create ARTIST/ALBUM directory
+      mkdir -p "$DEST/${ARTIST// /_}/${ALBUM// /_}"
+      # move to library
+      #cp --no-preserve=mode,ownership "$file" "$DEST/${ARTIST// /_}/${ALBUM// /_}/$TRACKNUMBER-${TITLE// /_}.flac"
+      rsync --progress "$file" "$DEST/${ARTIST// /_}/${ALBUM// /_}/$TRACKNUMBER-${TITLE// /_}.flac"
+
+    fi
+   
+}
+
+if [ -d "$DEST" ]
+then
+
+  # If no arguments supplied, assume all files in ~/Music/tobemoved
+  if [ $# -eq 0 ]
+  then
+
+    for file in $(find /home/mark/Music/tobemoved -name "*.flac")
+    do
+      # get metadata
+      get_metadata $file
+      
+      # organise file
+      organise_file $DEST $ARTIST $ALBUM  $TITLE $TRACKNUMBER
+
+    done
+
+  # otherwise we have supplied a specific directory, operate on that
+  else
+
+    for file in $(find $1 -name "*.flac")
+    do
+      # get metadata
+      get_metadata $file
+      
+      # organise file
+      organise_file $DEST $ARTIST $ALBUM  $TITLE $TRACKNUMBER
+
+    done
+
+  fi
+
+fi

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+export PATH=$PATH
+action=$1
+
+export USER=mark
+export HOME=/home/$USER
+
+source $HOME/.backenvrc
+
+echo "verifying environment"
+echo "gpg-agent: ${GPG_AGENT_INFO}"
+echo "gpg-key:   ${GPGKEY}"
+echo "ssh-agent-pid:   ${SSH_AGENT_PID}"
+echo "ssh-auth-sock:   ${SSH_AUTH_SOCK}"
+
+if [ -z $action ]; then
+  echo "requires an action!"
+  exit 1
+fi
+
+export PASSPHRASE="@sJ:pi&5$|T!ws=za_hHJRbq"
+
+[ -z $PASSPHRASE ] && exit 1
+
+echo "begin"
+
+for config in local_backup
+do
+  /home/mark/bin/horcrux clean   $config
+  /home/mark/bin/horcrux $action $config
+done

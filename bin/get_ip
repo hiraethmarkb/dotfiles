@@ -1,0 +1,3 @@
+#!/bin/bash
+#wget www.whatismyip.com/automation/n09230945.asp -O - -o /dev/null
+wget -q -O - checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
