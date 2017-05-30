@@ -1,2 +1,2 @@
 #!/bin/sh
-for x in *.wma; do ffmpeg -i "$x" -acodec libvorbis -aq 100  "`basename "$x" .wma`.ogg"; done
+find . -iname "*.wma" -type f -exec ffmpeg -i {} -acodec libvorbis -aq 100  {}.ogg \;
