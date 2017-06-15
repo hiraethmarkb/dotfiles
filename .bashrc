@@ -110,14 +110,11 @@ export PATH
 # User specific aliases and functions
 
 # enable powerline
-#if [ -f `which powerline-daemon` ]; then
-#  powerline-daemon -q
-#  POWERLINE_BASH_CONTINUATION=1
-#  POWERLINE_BASH_SELECT=1
-#  . /usr/share/powerline/bash/powerline.sh
-#fi
-if [ -f /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh ]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/bash/powerline.sh
+if [ -f `which powerline-daemon` ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  source /usr/share/powerline/bindings/bash/powerline.sh
 fi
 
 # Set VIM as the default editor
