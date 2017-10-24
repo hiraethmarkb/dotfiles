@@ -17,4 +17,5 @@ alias t='todo.sh -d ~/.config/todotxt/config'
 alias tp='cls && topydo'
 alias tc='cls && topydo columns'
 
-
+# open man files in yelp
+man () { yelp "man:$@"; }
