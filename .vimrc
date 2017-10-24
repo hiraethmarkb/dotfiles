@@ -25,6 +25,10 @@ filetype plugin on
 " enable omnicomplete
 set omnifunc=syntaxcomplete#Complete
 
+" set colors to 256
+"let g:solarized_termcolors=256
+set t_Co=256
+
 " Vim5 and later versions support syntax highlighting. Uncommenting the
 " following enables syntax highlighting by default.
 if has("syntax")
@@ -34,6 +38,9 @@ endif
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 set background=dark
+
+" Set colorscheme
+colorscheme solarized
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -101,8 +108,7 @@ set shiftwidth=2
 set autoindent
 set smartindent
 
-" Set colorscheme
-colorscheme solarized
+
 
 " Set dictionary
 set dictionary+=/usr/share/dict/words
