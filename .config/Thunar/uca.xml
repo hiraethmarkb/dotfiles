@@ -1,0 +1,63 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>Terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1494101624781703-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>filefind</icon>
+	<name>Find in this folder</name>
+	<unique-id>1494101624781773-2</unique-id>
+	<command>catfish --path=%f</command>
+	<description>Search for files within this folder</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>edit-delete</icon>
+	<name>Shred and Delete File(s)</name>
+	<unique-id>1514488404826866-1</unique-id>
+	<command>if zenity --question;then shred -fuz %F;fi</command>
+	<description>Shreds and deletes file(s). </description>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>folder-saved-search</icon>
+	<name>Find in selected folder</name>
+	<unique-id>1508842442657304-3</unique-id>
+	<command>catfish --path=%f%d</command>
+	<description>Search for files within the selected folder</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>emblem-symbolic-link</icon>
+	<name>Create symlink</name>
+	<unique-id>1508842710567754-8</unique-id>
+	<command>ln -s %f %n.symlink</command>
+	<description>Creating a symbolic link</description>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>soundconverter</icon>
+	<name>Convert Audio</name>
+	<unique-id>1511265930730159-1</unique-id>
+	<command>/usr/bin/soundconverter %F</command>
+	<description>Convert audio between formats</description>
+	<patterns>*</patterns>
+	<audio-files/>
+</action>
+</actions>
