@@ -1,0 +1,24 @@
+[All tasks]
+title = All tasks
+sortexpr = desc:importance
+show_all = 0
+
+[Overdue]
+title = Overdue
+filterexpr = due:<today
+sortexpr = desc:due
+show_all = 1
+
+[Due today]
+title = Due today
+filterexpr = due:today
+sortexpr = desc:importance
+show_all = 1
+
+[Due in the next week]
+title = Due in the next week
+filterexpr = due:<=1w
+sortexpr = desc:importance
+show_all = 1
+
+
