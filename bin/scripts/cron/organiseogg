@@ -5,10 +5,10 @@ DEST="/media/mark/d100fddb-bfac-4278-ba43-6c6142f0e716/@music/"
 get_metadata () {
 
   # mp3
-  ARTIST="`id3info "$file" | grep '^=== TPE1' | sed -e 's/.*: //g'`"
-  ALBUM="`id3info "$file" | grep '^=== TALB' | sed -e 's/.*: //g'`"
-  TITLE="`id3info "$file" | grep '^=== TIT2' | sed -e 's/.*: //g'`"
-  TRACKNUM="`id3info "$file" | grep '=== TRCK' | sed -e 's/.*: //g'`"
+  ARTIST="`vorbiscomment -l "$file" | grep 'ARTIST=' | sed -e 's/.*: //g'`"
+  ALBUM="`vorbiscomment -l "$file" | grep 'ALBUM=' | sed -e 's/.*: //g'`"
+  TITLE="`vorbiscomment -l "$file" | grep 'TITLE=' | sed -e 's/.*: //g'`"
+  TRACKNUM="`vorbiscomment -l "$file" | grep 'TRACKNUMBER=' | sed -e 's/.*: //g'`"
 
 }
 
@@ -75,4 +75,5 @@ then
   fi
 
 fi
+
 
