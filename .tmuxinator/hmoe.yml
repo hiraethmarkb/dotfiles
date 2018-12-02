@@ -1,6 +1,6 @@
-# ~/.tmuxinator/darwer.yml
+# ~/.tmuxinator/hmoe.yml
 
-name: darwer
+name: hmoe
 root: ~/
 
 # Optional tmux socket
@@ -28,19 +28,14 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t darwer
+# post: tmux -CC attach -t hmoe
 
 windows:
-  - top:
-    layout: main-vertical
-    # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-    # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-    # synchronize: after
-    panes:
-      - htop
-  - choons:
-    layout: main-vertical
-    panes:
-      - mocp
-  - shell:
-    layout: main-vertical
+  - editor:
+      layout: main-vertical
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - vim
+        - shell:
