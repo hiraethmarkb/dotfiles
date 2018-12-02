@@ -16,6 +16,9 @@ alias t='todo.sh -d ~/.config/todotxt/config'
 # set alias for tmux
 alias tmux='tmux -2'  # for 256color
 
+# set alias for tmuxinator
+alias mux='tmuxinator'
+
 # set aliases for topydo
 alias tp='cls && topydo'
 alias tc='cls && topydo columns'
