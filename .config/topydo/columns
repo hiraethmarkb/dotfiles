@@ -1,7 +1,14 @@
 [All tasks]
 title = All tasks
+filtexpr = -+shopping-list
 sortexpr = desc:importance
 show_all = 0
+
+[Shopping List]
+title = Shopping List
+filterexpr = +shopping-list
+sortexpr = desc:importance
+show_all = 1
 
 [Overdue]
 title = Overdue
