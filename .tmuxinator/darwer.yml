@@ -38,9 +38,11 @@ windows:
     # synchronize: after
     panes:
       - htop
+  
   - choons:
     layout: main-vertical
     panes:
       - mocp
+  
   - shell:
     layout: main-vertical
