@@ -38,11 +38,9 @@ windows:
     # synchronize: after
     panes:
       - htop
-  
   - choons:
     layout: main-vertical
     panes:
-      - mocp
-  
+      - mocp  
   - shell:
     layout: main-vertical
