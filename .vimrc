@@ -168,6 +168,15 @@ nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
 
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+
+" Zoom the tmux runner pane
+map <Leader>vz :VimuxZoomRunner<CR>
+
 " Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
