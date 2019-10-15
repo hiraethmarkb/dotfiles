@@ -16,3 +16,5 @@
 	lg = log --oneline --abbrev-commit --all --graph --decorate --color
 [diff]
 	tool = meld
+[cola]
+	spellcheck = false
