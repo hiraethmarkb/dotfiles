@@ -74,7 +74,7 @@ channels = (
   { name = "#fedora"; chatnet = "Freenode"; autojoin = "No"; },
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "#linuxoutlaws"; chatnet = "Freenode"; autojoin = "No"; },
-  { name = "#scotlug"; chatnet = "FreeNode"; autojoin = "No"; },
+  { name = "#scotlug"; chatnet = "FreeNode"; autojoin = "No"; }
 );
 
 aliases = {
@@ -184,7 +184,6 @@ statusbar = {
         window = { };
         window_empty = { };
         lag = { priority = "-1"; };
-        act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
       };
@@ -234,6 +233,13 @@ statusbar = {
         topicbarend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_0 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 settings = {
@@ -242,6 +248,7 @@ settings = {
     user_name = "thedarkmane";
     nick = "thedarkmane";
   };
-  "fe-common/core" = { use_msgs_window = "yes"; };
+  "fe-common/core" = { use_msgs_window = "yes"; theme = "xchat"; };
   "fe-text" = { actlist_sort = "refnum"; };
+  "perl/core/scripts" = { awl_shared_sbar = "OFF"; awl_viewer = "no"; };
 };
