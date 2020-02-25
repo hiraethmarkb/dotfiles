@@ -1,3 +1,4 @@
+# vim: filetype=i3
 # i3 config file for the Regolith Desktop Environment
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -34,6 +35,19 @@ set_from_resource $ws16 i3-wm.workspace.16.name "16"
 set_from_resource $ws17 i3-wm.workspace.17.name "17"
 set_from_resource $ws18 i3-wm.workspace.18.name "18"
 set_from_resource $ws19 i3-wm.workspace.19.name "19"
+
+# #---Dropdown Windows---# #
+# General dropdown window traits. The order can matter.
+exec --no-startup-id $term -f "size=10" -e "mux darwer" -name drawer
+for_window [instance="drawer"] floating enable
+for_window [instance="drawer"] move scratchpad
+for_window [instance="drawer"] sticky enable
+for_window [instance="drawer"] scratchpad show
+for_window [instance="drawer"] resize set 625 450
+for_window [instance="drawer"] border pixel 3
+for_window [instance="drawer"] move position center
+
+bindsym $mod+Shift+` [instance="drawer"] scratchpad show
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
