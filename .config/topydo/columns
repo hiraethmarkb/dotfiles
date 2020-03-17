@@ -17,7 +17,7 @@ show_all = 1
 
 [Due in the next week]
 title = Due in the next week
-filterexpr = due:<=1w
+filterexpr = due:>=today due:<=1w
 sortexpr = desc:importance
 show_all = 1
 
