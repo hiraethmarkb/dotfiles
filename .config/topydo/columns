@@ -3,30 +3,6 @@ title = All tasks
 sortexpr = desc:importance
 show_all = 0
 
-[Shopping List]
-title = Shopping List
-filterexpr = +shopping-list
-sortexpr = desc:importance
-show_all = 1
-
-[Important]
-title = Important
-filterexpr = @important
-sortexpr = asc:due
-show_all = 1
-
-[Old Place]
-title = Old Place
-filterexpr = @oldplace
-sortexpr = asc:due
-show_all = 1
-
-[New Place]
-title = New Place
-filterexpr = @newplace
-sortexpr = asc:due
-show_all = 1
-
 [Overdue]
 title = Overdue
 filterexpr = due:<today
@@ -45,4 +21,14 @@ filterexpr = due:<=1w
 sortexpr = desc:importance
 show_all = 1
 
+[Shopping List]
+title = Shopping List
+filterexpr = +shopping-list
+sortexpr = desc:importance
+show_all = 1
 
+[Messages]
+title = Messages
+filterexpr = @messages
+sortexpr = asc:due
+show_all = 1
