@@ -122,7 +122,8 @@ export VISUAL="gvim -v"
 export EDITOR=$VISUAL
 
 # For gnupg.vim
-GPG_TTY=`tty` && export GPG_TTY
+#GPG_TTY=`tty` && export GPG_TTY
+export GPG_TTY=$(tty)
 
 # For todo.sh
 export TODOTXT_DEFAULT_ACTION=ls
