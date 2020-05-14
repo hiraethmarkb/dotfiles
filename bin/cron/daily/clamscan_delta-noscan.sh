@@ -28,7 +28,7 @@ EMAIL_FROM="no-reply@cuchulainn"
 LOG_TAIL_SIZE=50; # Number of lines from tail of scan log to email in alerts 
 
 ### Log File Path
-LOG_DIR="/home/mark/.log/clamav"
+LOG_DIR="/home/mark/.logis/clamav"
 
 # Rotates log at size stated, but maintains only one previous.  If you use the
 # quarantine capabilities, the log file is the only source of information that
@@ -66,17 +66,7 @@ SCAN_ROOT="/home/mark"
 # Ensure QUARANTINE_DIR is not in path if SCAN_ACTION is --copy or --move
 # Default="-not -path '/sys/*' -and -not -path '/proc/*' \
 #-and -not -path '${QUARANTINE_DIR}/*'"
-NO_SCAN_PATHS=( \
-/home/.ecryptfs/mark/.ecryptfs \
-/home/.ecryptfs/mark/.Private \
-/home/mark/.clamtk/viruses \
-/home/mark/.ecryptfs \
-/home/mark/.gvfs \
-/home/mark/.Private \
-/home/mark/Mail \
-/run/user/mark/gvfs \
-smb4k \ 
-)
+NO_SCAN_PATHS="-not -path '/home/.ecryptfs/mark/.ecryptfs' -and -not -path '/home/.ecryptfs/mark/.Private' -and -not -path '/home/mark/.clamtk/viruses' -and -not -path '/home/mark/.ecryptfs' -and -not -path '/home/mark/.gvfs' -and -not -path '/home/mark/.Private' -and -not -path '/home/mark/Mail' -and -not -path '/run/user/mark/gvfs' -and -not -path 'smb4k'"
 
 
 # ****************************************************************************
