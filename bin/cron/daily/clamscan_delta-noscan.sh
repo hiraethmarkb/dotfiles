@@ -67,17 +67,17 @@ SCAN_ROOT="/home/mark"
 # Default="-not -path '/sys/*' -and -not -path '/proc/*' \
 #-and -not -path '${QUARANTINE_DIR}/*'"
 NO_SCAN_PATHS="\
--not -path '/home/.ecryptfs/mark/.ecryptfs' \
--and -not -path '/home/.ecryptfs/mark/.Private' \
--and -not -path '/home/mark/.cache' \
--and -not -path '/home/mark/.clamtk/viruses' \
--and -not -path '/home/mark/.ecryptfs' \
--and -not -path '/home/mark/.gvfs' \
+-not -path '/home/.ecryptfs/mark/.ecryptfs/*' \
+-and -not -path '/home/.ecryptfs/mark/.Private/*' \
+-and -not -path '/home/mark/.cache/*' \
+-and -not -path '/home/mark/.clamtk/viruses/*' \
+-and -not -path '/home/mark/.ecryptfs/*' \
+-and -not -path '/home/mark/.gvfs/*' \
 -and -not -path '${QUARANTINE_DIR}/*'
--and -not -path '/home/mark/.Private' \
--and -not -path '/home/mark/Mail' \
--and -not -path '/run/user/mark/gvfs' \
--and -not -path 'smb4k'"
+-and -not -path '/home/mark/.Private/*' \
+-and -not -path '/home/mark/Mail/*' \
+-and -not -path '/run/user/mark/gvfs/*' \
+-and -not -path 'smb4k/*'"
 
 
 # ****************************************************************************
