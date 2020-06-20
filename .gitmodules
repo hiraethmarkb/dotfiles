@@ -1,0 +1,3 @@
+[submodule "bin/mashpodder"]
+	path = bin/mashpodder
+	url = https://github.com/chessgriffin/mashpodder.git
