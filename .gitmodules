@@ -1,3 +1,6 @@
 [submodule "bin/mashpodder"]
 	path = bin/mashpodder
 	url = https://github.com/chessgriffin/mashpodder.git
+[submodule ".mc/lib/mc-solarized-skin"]
+	path = .mc/lib/mc-solarized-skin
+	url = https://github.com/pavlo/mc-solarized-skin.git
