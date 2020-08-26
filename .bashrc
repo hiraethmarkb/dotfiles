@@ -130,7 +130,7 @@ export TODOTXT_DEFAULT_ACTION=ls
 export TODOTXT_SORT_COMMAND='env LC_COLLATE=C sort -k 2,2 -k 1,1n'
 
 # Solarized friendly color scheme for MC
-export MC_SKIN=$HOME/.config/mc/lib/solarized.ini
+export MC_SKIN=$HOME/.mc/lib/mc-solarized-skin/solarized.ini
 
 # Python virtualenvs
 export WORKON_HOME="$HOME/.virtualenvs"
