@@ -1,6 +1,9 @@
 # .bash_aliases
 #
 
+# set aliase for buku
+alias b="buku --suggest"
+
 # clear screen
 alias cls='clear'
 
@@ -24,4 +27,4 @@ alias tp='cls && topydo'
 alias tc='cls && topydo columns'
 
 # open man files in yelp
-man () { yelp "man:$@"; }
+#man () { yelp "man:$@"; }
