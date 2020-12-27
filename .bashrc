@@ -116,7 +116,7 @@ fi
 #
 # User specific environment and startup programs
 
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.symfony/bin
+PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HOME/.symfony/bin:$HOME/.config/composer/vendor/bin
 export PATH
 
 # enable powerline
