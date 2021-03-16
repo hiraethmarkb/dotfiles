@@ -1,6 +1,7 @@
 #!/bin/bash
 #DEST="/mnt/shares/media/@music" 
-DEST="/media/mark/d100fddb-bfac-4278-ba43-6c6142f0e716/@music/"
+#DEST="/media/mark/d100fddb-bfac-4278-ba43-6c6142f0e716/@music/"
+DEST="/media/usb0/@music/"
 
 # get_metadata
 get_metadata () {
