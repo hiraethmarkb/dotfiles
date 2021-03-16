@@ -56,3 +56,9 @@ alias tc='cls && topydo columns'
 
 # open man files in yelp.
 #man () { yelp "man:$@"; }
+
+# Drupal/PHP CodeSniffer
+alias drupalcs="~/.config/composer/vendor/bin/phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md,yml'"
+alias drupalcsp="~/.config/composer/vendor/bin/phpcs --standard=DrupalPractice --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md,yml'"
+alias drupalcbf="~/.config/composer/vendor/bin/phpcbf --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md,yml'"
+
