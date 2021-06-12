@@ -145,3 +145,8 @@ export MC_SKIN=$HOME/.mc/lib/mc-solarized-skin/solarized.ini
 # Python virtualenvs
 export WORKON_HOME="$HOME/.virtualenvs"
 #source $HOME/bin/virtualenvwrapper_bashrc
+
+# Docker CE
+export PATH=/usr/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
