@@ -2,3 +2,4 @@ gnome.terminal.font:	JetBrains Mono 10
 ! i3-wm.bar.font: JetBrains Mono 13, Material Design Icons 13
 i3-wm.font: JetBrains Mono 11
 ! rofi.font: JetBrains Mono 16
+i3-wm.bar.position: top
