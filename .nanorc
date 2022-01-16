@@ -1,0 +1,3 @@
+# include all the preexisting configs
+include "/usr/share/nano/*.nanorc"
+set linenumbers
